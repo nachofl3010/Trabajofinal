@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href=# >Wawrinka</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href=#>Federer</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href=#>Nadal</a>
+            </li>
+            <li
+                class="nav-item">
+                <a class="nav-link" href=#>Djokovic</a>
+            </li>
+            <li
+                class="nav-item">
+                <a class="nav-link" href=#>... more</a>  
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+<h1>Results</h1>
+   
+    {% for result in results %}
+
+    <div class="card" style="width: 18rem;">
+        
+        <div class="card-body">
+        <h5 class="card-title">{{result.name}}</h5>
+        <p class="card-text">{{result.tournament}}</p>
+        <p class="card-text">{{result.result}}</p>
+        <p class="card-text">{{result.points_earned}}</p>
+
+        </div>
+
+        </div>
+
+
+        
+
+
+
+    {% endfor %}
+
+{% endblock %}
