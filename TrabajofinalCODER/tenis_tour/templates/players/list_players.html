@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Players
+{% endblock %}
+
+{% block content %}
+<h1>Players</h1>
+    <h5> <a href="/players/add-player/" class="btn btn-primary">Add player</a></h5>
+   
+    {% for player in players %}
+
+    <div class="card" style="width: 18rem;">
+        
+        <div class="card-body">
+        <h5 class="card-title">{{player.name}}</h5>
+        <p class="card-text">{{player.country}}</p>
+        {% if player.is_active == True %}
+            <p>Active player</p>
+        {% else %}
+            <p>Retired player</p>
+        {% endif %}
+
+        <a href="/players/list-results/" class="btn btn-primary">View results</a>
+        </div>
+    </div>
+
+        
+
+
+
+    {% endfor %}
+
+{% endblock %}

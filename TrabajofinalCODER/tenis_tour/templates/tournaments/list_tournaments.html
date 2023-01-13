@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Tournaments
+{% endblock %}
+
+{% block content %}
+<h1>Tournaments</h1>
+    
+    {% for tournament in tournaments %}
+
+    <div class="card" style="width: 18rem;">
+        
+        <div class="card-body">
+        <h5 class="card-title">{{tournament.name}}</h5>
+        <p class="card-text">Category: {{tournament.category}}</p>
+        </div>
+    </div>
+
+        
+
+
+
+    {% endfor %}
+
+{% endblock %}
